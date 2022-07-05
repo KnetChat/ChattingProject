@@ -1,10 +1,20 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://root:1234@localhost/chatDB?authSource=admin
+      uri: mongodb://knet:1234@localhost/chatDB?authSource=admin
       database: chatDB
-      username: root
+      username: knet
       password: 1234
+
+  datasource:
+    url: jdbc:mariadb://localhost:3306/memberDB
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: 1234
+
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+
+server:
+  port: 8081

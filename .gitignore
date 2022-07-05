@@ -38,3 +38,6 @@ out/
 
 ### intellij ###
 ./idea
+
+### react ###
+src/main/webapp/node_modules

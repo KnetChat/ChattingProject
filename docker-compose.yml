@@ -7,8 +7,19 @@ services:
     ports:
       - "27017:27017"
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_USERNAME=knet
       - MONGO_INITDB_ROOT_PASSWORD=1234
       - MONGO_INITDB_DATABASE=chatDB
 
 
+  maria:
+    image: mariadb
+    restart : always
+    ports:
+      - "3306:3306"
+
+    environment:
+      MARIADB_DATABASE: memberDB
+      MARIADB_ROOT_PASSWORD: 1234
+      MARIADB_USER: knet
+      MARIADB_PASSWORD: 1234
