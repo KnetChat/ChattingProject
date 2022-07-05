@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:1234@localhost/chatDB?authSource=admin
+      database: chatDB
+      username: root
+      password: 1234
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
